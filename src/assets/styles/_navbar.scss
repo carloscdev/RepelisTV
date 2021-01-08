@@ -33,4 +33,13 @@
       }
     }
   }
+  @media (max-width: 640px) {
+    nav {
+      .menu {
+        ul {
+          display: none;
+        }
+      }
+    }
+  }
 }
