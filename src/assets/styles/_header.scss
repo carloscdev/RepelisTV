@@ -1,0 +1,43 @@
+.header {
+  background-image: url("../images/banner.jpg");
+  height: 500px;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    min-height: 100vh;
+    background-color: rgba($color: #000000, $alpha: 0.85);
+    z-index: 0;
+  }
+  &__contenedor {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    height: 500px;
+    min-height: 100vh;
+    &--texto {
+      h1 {
+        font-size: 10rem;
+        font-weight: 700;
+        color: $color-white;
+
+      }
+      p {        
+        font-weight: 300;
+        color: $color-gray;
+      }
+    }
+    &--brand {
+      position: absolute;
+      bottom: 2rem;
+      right: 0;
+      font-size: 2.5rem;
+      color: $color-white;
+    }
+  }
+}

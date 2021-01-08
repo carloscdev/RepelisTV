@@ -1,0 +1,31 @@
+.btn {
+  text-transform: capitalize;
+  padding: 1.2rem 4rem;
+  position: relative;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.15s ease-in-out;
+  outline: none;
+  min-height: 44px;
+  text-align: center;
+  margin-top: 3rem;
+  &.is-full {
+    width: 100%;
+    display: block;
+  }
+  &.is-main {
+    background: $color-main;
+    color: $color-white;
+    border: 1px solid $color-main;
+    &:hover {
+      box-shadow: 0 1px 3px $color-main;
+      color: $color-white;
+      border: 1px solid darken($color-main, 3%);
+      background: darken($color-main, 3%);
+    }
+  }
+
+}

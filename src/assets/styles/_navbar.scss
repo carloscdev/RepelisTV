@@ -1,0 +1,36 @@
+.navbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  color: $color-white;
+  nav {
+    padding: 5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.1rem;
+    .brand {
+      width: calc(5vh + 3rem);
+    }
+    .menu {
+      ul {
+        display: flex;
+        li {
+          font-size: 2.1rem;
+          font-weight: 300;
+        }
+        li:nth-child(2) {
+          margin: 0 3vw;
+        }
+        a {
+          &.router-link-exact-active {
+            font-weight: 700;
+            border-bottom: 0.5rem solid $color-main;
+          }
+        }
+      }
+    }
+  }
+}
