@@ -21,16 +21,18 @@
               class="rate"
             />
           </div>
-          <div class="ultimos__movies--text">
-            <div class="color-white">
-              <small
-                ><font-awesome-icon class="mr-2" :icon="['fas', 'eye']" />{{
-                  r.popularity
-                }}</small
-              >
+          <router-link :to="`/movie/${r.id}`">
+            <div class="ultimos__movies--text">
+              <div class="color-white">
+                <small
+                  ><font-awesome-icon class="mr-2" :icon="['fas', 'eye']" />{{
+                    r.popularity
+                  }}</small
+                >
+              </div>
+              <h4 class="color-white">{{ r.title }}</h4>
             </div>
-            <h4 class="color-white">{{ r.title }}</h4>
-          </div>
+          </router-link>
         </div>
       </div>
     </div>

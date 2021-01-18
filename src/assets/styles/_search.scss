@@ -1,7 +1,7 @@
-.header {
+.searchMovie {
   background-image: url("../images/banner.jpg");
   height: 500px;
-  min-height: 100vh;
+  min-height: 50vh;
   background-size: cover;
   background-position: center;
   @media (max-width: 768px) {
@@ -13,7 +13,7 @@
     width: 100%;
     height: 500px;
     left: 0;
-    min-height: 100vh;
+    min-height: 50vh;
     background-color: rgba($color: #000000, $alpha: 0.85);
     z-index: 0;
   }
@@ -23,7 +23,7 @@
     position: relative;
     z-index: 1;
     height: 500px;
-    min-height: 100vh;
+    min-height: 50vh;
     &--texto {
       p {        
         font-weight: 300;

@@ -17,7 +17,7 @@
             class="popular__card"
             :style="`background-image:url('${urlImage}${list.poster_path}')`"
           >
-            <router-link to="/about">
+            <router-link :to="`/movie/${list.id}`">
               <div class="popular__card--text contenedor">
                 <h4 class="color-white">{{ list.title }}</h4>
                 <div class="color-white">

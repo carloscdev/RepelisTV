@@ -11,11 +11,9 @@
           <li>
             <router-link to="/">Inicio</router-link>
           </li>
+
           <li>
-            <router-link to="/about">Películas</router-link>
-          </li>
-          <li>
-            <router-link to="/about">Series</router-link>
+            <router-link to="/serie">Series</router-link>
           </li>
         </ul>
       </div>
@@ -41,12 +39,14 @@
               icon="search"
               size="is-large"
               class="inputSearch"
+              v-model="nameMovie"
             ></b-input>
             <p class="control buttonSearch">
               <b-button
                 style="  width: 100%;"
                 class="button is-main "
                 size="is-large"
+                @click="search()"
                 ><font-awesome-icon :icon="['fas', 'search']"
               /></b-button>
             </p>
@@ -62,7 +62,16 @@ export default {
   data() {
     return {
       isCardModalActive: false,
+      nameMovie: "",
     };
+  },
+  methods: {
+    search() {
+      if (this.nameMovie !== "") {
+        this.isCardModalActive = false;
+        this.$router.push(`/search/${this.nameMovie}`);
+      }
+    },
   },
 };
 </script>
