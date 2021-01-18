@@ -26,6 +26,11 @@ export default {
   components: {
     ListMovie,
   },
+  data() {
+    return {
+      results: [],
+    };
+  },
   async created() {
     await this.axios
       .get(

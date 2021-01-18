@@ -1,25 +1,30 @@
 <template>
   <div class="listMovie">
     <div class="listMovie__contenedor contenedor">
-      <div
-        class="listMovie__contenedor--item"
-        v-for="result in results"
-        :key="result.id"
-      >
-        <div>
-          <router-link :to="`/movie/${result.id}`">
-            <img :src="`${urlImage}/${result.poster_path}`" alt="Image" />
-          </router-link>
+      <template v-if="results.length > 0">
+        <div
+          class="listMovie__contenedor--item"
+          v-for="result in results"
+          :key="result.id"
+        >
+          <div>
+            <router-link :to="`/movie/${result.id}`">
+              <img :src="`${urlImage}/${result.poster_path}`" alt="Image" />
+            </router-link>
+          </div>
+          <div>
+            <router-link :to="`/movie/${result.id}`">
+              <h4 class="title is-size-8">{{ result.original_title }}</h4>
+            </router-link>
+            <br />
+            <p class="subtitle is-size-8">{{ result.overview }}</p>
+            <small>Fecha: {{ result.release_date }}</small>
+          </div>
         </div>
-        <div>
-          <router-link :to="`/movie/${result.id}`">
-            <h4 class="title is-size-8">{{ result.original_title }}</h4>
-          </router-link>
-          <br />
-          <p class="subtitle is-size-8">{{ result.overview }}</p>
-          <small>{{ result.release_date }}</small>
-        </div>
-      </div>
+      </template>
+      <template v-else>
+        <h4>Sin resultados</h4>
+      </template>
     </div>
   </div>
 </template>
@@ -61,7 +66,7 @@ export default {
         grid-template-columns: 1fr;
         max-height: 900px;
         img {
-          max-height: 350px;
+          max-height: 500px;
         }
       }
       img {
@@ -69,7 +74,7 @@ export default {
         min-width: 100%;
       }
       div:last-child {
-        padding: 2rem 2rem 0;
+        padding: 2rem;
       }
     }
   }

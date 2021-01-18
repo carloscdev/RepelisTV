@@ -25,6 +25,9 @@
     height: 500px;
     min-height: 100vh;
     &--texto {
+      @media (max-width: 768px) {
+        margin: 0 auto;
+      }
       p {        
         font-weight: 300;
         color: $color-gray;
